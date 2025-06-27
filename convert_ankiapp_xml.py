@@ -8,7 +8,7 @@ def extract_text_from_richtext(elem):
             text_parts.append(part.text.strip())
     return ' / '.join(filter(None, text_parts))
 
-tree = ET.parse('ankiapp_export.xml')  # замени на имя своего XML-файла, если другое
+tree = ET.parse('ankiapp_export.xml')  # Replace with your XML file name if it’s different
 root = tree.getroot()
 
 with open('anki_import.txt', 'w', encoding='utf-8') as f:
@@ -17,4 +17,4 @@ with open('anki_import.txt', 'w', encoding='utf-8') as f:
         back_elem = card.find(".//rich-text[@name='Back']")
         front = extract_text_from_richtext(front_elem)
         back = extract_text_from_richtext(back_elem)
-        f.write(f"{front}\t{back}\n")  # табуляция между полями
+        f.write(f"{front}\t{back}\n")  
