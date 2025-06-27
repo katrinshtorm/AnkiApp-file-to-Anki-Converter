@@ -33,6 +33,8 @@ Use this Python script to convert an `.xml` deck exported from **AnkiApp** into 
 
    ```
    anki_import.txt
+
+5. Use ChatGPT if it doesnt work
    ```
 
 
